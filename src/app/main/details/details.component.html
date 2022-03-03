@@ -1,0 +1,23 @@
+<button class="btn btn-default" type="button">
+  <a routerLink="/create">Thêm sách</a>
+</button>
+<button class="btn btn-default">
+  <a routerLink="/">Back</a>
+</button>
+<table class="table table-striped">
+  <tr>
+    <th>#</th>
+    <th>Tên sách</th>
+    <th>Tên tác giả</th>
+    <th>Nội dung</th>
+    <th colspan="2"></th>
+  </tr>
+  <tr>
+    <td>{{book.id}}</td>
+    <td><a (click)="getId(book.id)" routerLink="/details">{{book.title}}</a></td>
+    <td>{{book.author}}</td>
+    <td>{{book.description}}</td>
+    <td><button (click)="getId(book.id)" routerLink="/edit">Edit</button></td>
+    <td><button (click)="getId(book.id)" routerLink="/delete">Delete</button></td>
+  </tr>
+</table>

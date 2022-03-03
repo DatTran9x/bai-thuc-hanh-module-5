@@ -1,0 +1,18 @@
+<button class="btn btn-default">
+  <a routerLink="/">Back</a>
+</button>
+<table class="table table-striped">
+  <tr>
+    <th>#</th>
+    <th>Tên sách</th>
+    <th>Tên tác giả</th>
+    <th>Nội dung</th>
+  </tr>
+  <tr>
+    <td>{{book.id}}</td>
+    <td>{{book.title}}</td>
+    <td>{{book.author}}</td>
+    <td>{{book.description}}</td>
+  </tr>
+</table>
+<button class="btn btn-default" (click)="delete(book.id)">Delete</button>

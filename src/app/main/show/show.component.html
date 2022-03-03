@@ -1,0 +1,19 @@
+<button class="btn btn-default">
+  <a routerLink="/create">Thêm sách</a>
+</button>
+<p>Có {{list.length}} cuốn sách</p>
+<table class="table table-striped">
+  <tr>
+    <th>#</th>
+    <th>Tên sách</th>
+    <th>Tên tác giả</th>
+    <th colspan="2"></th>
+  </tr>
+  <tr *ngFor="let b of list">
+    <td>{{b.id}}</td>
+    <td><a routerLink="/details" (click)="getId(b.id)">{{b.title}}</a></td>
+    <td>{{b.author}}</td>
+    <td><button (click)="getId(b.id)" routerLink="/edit">Edit</button></td>
+    <td><button (click)="getId(b.id)" routerLink="/delete">Delete</button></td>
+  </tr>
+</table>
